@@ -10,6 +10,7 @@ for (let i = 0; i < Math.pow(dimensions,2); i++) {//create grid with dimensions 
     element.style.height = boxSize+"px"; 
     element.style.borderStyle = "solid";
     element.style.color = "grey";
+    element.style.boxSizing = "border-box";
     container.appendChild(element);
 }
 

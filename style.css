@@ -6,4 +6,6 @@
 
 .container{
     display: grid;
+    border-style: solid;
+    border-color: gray;
 }
