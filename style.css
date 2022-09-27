@@ -6,6 +6,24 @@
 
 .container{
     display: grid;
+    width: 800px;
+    height: 800px;
     border-style: solid;
     border-color: gray;
 }
+
+#btnContainer .sizeBtn{
+    margin: 30px;
+    width: 150px;
+    height: 30px;
+    border-radius: 8px;
+    border-color: grey;
+    border-style: solid;
+}
+
+#btnContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
