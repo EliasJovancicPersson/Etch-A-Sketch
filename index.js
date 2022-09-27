@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 const dimensions = 16;
-let boxSize = 20;
+let boxSize = 40;
 let gTCS = "";                  //grid-template-columns string
 
 
@@ -11,6 +11,9 @@ for (let i = 0; i < Math.pow(dimensions,2); i++) {//create grid with dimensions 
     element.style.borderStyle = "solid";
     element.style.color = "grey";
     element.style.boxSizing = "border-box";
+    element.addEventListener('click', function(){
+        changeColor(element);
+    })
     container.appendChild(element);
 }
 
@@ -19,3 +22,8 @@ for (let i = 0; i < dimensions; i++) {//for loop with dimensions to add column c
 }
 
 container.style.gridTemplateColumns = gTCS;
+
+
+function changeColor(element){
+element.style.backgroundColor = "red";
+}
