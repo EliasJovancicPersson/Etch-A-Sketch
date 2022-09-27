@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 const sizeBtn = document.querySelector('#btnContainer .sizeBtn');
+const clearBtn = document.querySelector('#btnContainer .clearBtn');
 let dimensions = 16;
 let boxSize = 40;
 let gTCS = "";                  //grid-template-columns string
@@ -39,7 +40,10 @@ function RemoveGrid(){
 }
 
 function changeColor(element){
-element.style.backgroundColor = "red";
+let r = Math.floor(Math.random() * 255);
+let g = Math.floor(Math.random() * 255);
+let b = Math.floor(Math.random() * 255);
+element.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 
 sizeBtn.addEventListener('click',function(){        //prompt for changing size, create grid and remove grid
@@ -52,4 +56,11 @@ sizeBtn.addEventListener('click',function(){        //prompt for changing size, 
         CreateGrid();
     }
 
+})
+
+clearBtn.addEventListener('click', function() {
+    let gridElements = document.querySelectorAll('.gridElement');
+    gridElements.forEach(element => {
+        element.style.backgroundColor = "white";
+    });
 })
