@@ -28,7 +28,8 @@ function CreateGrid(){
         gTCS += "auto ";
     }
 
-    container.style.gridTemplateColumns = gTCS;}
+    container.style.gridTemplateColumns = gTCS;
+}
 
 function RemoveGrid(){
     let gridElements = document.querySelectorAll('.gridElement');
@@ -36,8 +37,6 @@ function RemoveGrid(){
         element.remove();
     });
 }
-
-
 
 function changeColor(element){
 element.style.backgroundColor = "red";
