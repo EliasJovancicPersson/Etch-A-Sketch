@@ -44,6 +44,12 @@ element.style.backgroundColor = "red";
 
 sizeBtn.addEventListener('click',function(){        //prompt for changing size, create grid and remove grid
     dimensions = window.prompt("Enter new size of grid");
-    RemoveGrid();
-    CreateGrid();
+    if(dimensions > 100 || dimensions < 1){
+        alert("Error max number is 100, min is 1");
+    }
+    else{
+        RemoveGrid();
+        CreateGrid();
+    }
+
 })
